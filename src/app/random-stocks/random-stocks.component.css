@@ -1,0 +1,15 @@
+.company-card {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.company-card.selected {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.company-logo {
+  width: 40px; 
+  height: 40px; 
+  object-fit: cover;
+}
