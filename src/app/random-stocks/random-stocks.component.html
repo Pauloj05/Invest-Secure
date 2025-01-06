@@ -28,30 +28,6 @@
     </div>
   </div>
 
-  <!-- Seção de compra e venda -->
-  <div *ngIf="selectedCompanyIndex !== -1" class="row mt-4">
-    <div class="col-md-6">
-      <h4>{{ companyProfiles[selectedCompanyIndex].data.name }}</h4>
-      <div>
-        <label for="buyQuantity">Quantidade para comprar:</label>
-        <input [(ngModel)]="buyQuantity" type="number" id="buyQuantity" class="form-control" min="1">
-        <button (click)="buyStock()" class="btn btn-success mt-2">Comprar</button>
-      </div>
-      <div class="mt-4">
-        <label for="sellQuantity">Quantidade para vender:</label>
-        <input [(ngModel)]="sellQuantity" type="number" id="sellQuantity" class="form-control" min="1">
-        <button (click)="sellStock()" class="btn btn-danger mt-2">Vender</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Informações adicionais -->
-  <div class="row mt-4">
-    <div class="col-md-6">
-      <p><strong>Saldo da Carteira:</strong> {{ balance | currency }}</p>
-    </div>
-  </div>
-
   <!-- Mensagem de erro -->
   <div *ngIf="errorMessage" class="alert alert-danger mt-3" role="alert">
     {{ errorMessage }}
